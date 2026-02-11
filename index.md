@@ -80,7 +80,7 @@ body {
 
 .glass {
   width: 100%; /* Pełna szerokość kontenera */
-  max-width: 700px; /* Limit szerokości na dużych ekranach */
+  max-width: 1000px; /* Limit szerokości na dużych ekranach */
   padding: 40px 20px; /* Dopasowany padding do telefonów */
   border-radius: 20px;
   backdrop-filter: blur(20px);
@@ -100,6 +100,10 @@ body {
 
   .typing {
     font-size: 1.2rem; /* Mniejsze litery na telefonach */
+    white-space: normal; /* tekst może się zawijać */
+    display: inline;      /* lub block, jeśli chcesz osobną linię */
+    animation: none;      /* opcjonalnie wyłącz animację typing, bo może źle działać przy zawijaniu */
+    border-right: none;   
   }
 
   .btn {
@@ -110,10 +114,11 @@ body {
 /* ===== TYPING ===== */
 .typing {
   border-right: 3px solid #00f2fe;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   display: inline-block;
   animation: typing 3s steps(30), blink .7s infinite;
+  max-width: 100%; /* dopasowanie do kontenera */
 }
 
 @keyframes typing {
@@ -363,8 +368,8 @@ section.visible {
         <div class="project-image">
           <img src="/assets/xxx.png" alt="Projekt 1 – strona startupu">
         </div>
-        <h3>Projekt 1</h3>
-        <p>Nowoczesna strona dla startupu technologicznego.</p>
+        <h3>Strona WWW</h3>
+        <p>Nowoczesna strona internetowa warsztatu samochodowego</p>
       </div>
   
       <div class="card project-card">
