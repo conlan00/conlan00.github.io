@@ -194,6 +194,41 @@ section.visible {
   transform: translateY(-12px);
   box-shadow: 0 14px 35px rgba(0,0,0,0.45);
 }
+/* ===== PROJECT CARDS ===== */
+.projects {
+  margin-top: 60px;
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+  transition: transform .5s;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  margin-top: 20px;
+}
+
+.project-card p {
+  padding: 0 30px 30px;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .project-card p {
+    padding: 0 20px 25px;
+  }
+}
 </style>
 
 <div class="hero">
@@ -223,49 +258,97 @@ section.visible {
   </section>
   
 
-<section id="oferta">
-<h2> Moje usługi</h2>
-<div class="cards">
-  <div class="card">
-    <h3>🌐 Strony WWW</h3>
-    <p>Nowoczesne, responsywne strony firmowe i landing page.</p>
-  </div>
-  <div class="card">
-    <h3>⚡ Optymalizacja</h3>
-    <p>Przyspieszam istniejące strony i poprawiam SEO.</p>
-  </div>
-  <div class="card">
-    <h3>🛠 Aplikacje Web</h3>
-    <p>Systemy, dashboardy i aplikacje online.</p>
-  </div>
-  <div class="card">
-    <h3>Konsultacje programistyczne</h3>
-    <p>Sdsfaaaaaaaaaa aaaaaaaaaaaaaa aaaaaafdsaa</p>
-  </div>
-</div>
-</section>
+  <section id="oferta">
+    <h2>Moje usługi</h2>
+  
+    <div class="cards">
+      <div class="card">
+        <h3>⚡ Optymalizacja & SEO</h3>
+        <p>
+          Poprawa wydajności, Core Web Vitals i widoczności w Google.
+          <br><strong>Technologie:</strong> Lighthouse, PageSpeed, SEO on-page
+        </p>
+      </div>
+  
+      <div class="card">
+        <h3>🛠 Aplikacje Web i strony <strong>WWW</strong></h3>
+        <p>
+          Systemy webowe, dashboardy, panele administracyjne.
+          <br><strong>Technologie:</strong> Angular, .NET, REST API
+        </p>
+      </div>
+  
+      <div class="card">
+        <h3>📱 Aplikacje Front-end</h3>
+        <p>
+          Interfejsy użytkownika oparte o komponenty.
+          <br><strong>Technologie:</strong> React, Next, Angular
+        </p>
+      </div>
+  
+      <div class="card">
+        <h3>🔌 Integracje API</h3>
+        <p>
+          Integracja z zewnętrznymi usługami i systemami.
+          <br><strong>Technologie:</strong> REST, JSON, Webhooks
+        </p>
+      </div>
+  
+      <div class="card">
+        <h3>☁️ Deploy & Hosting</h3>
+        <p>
+          Wdrażanie aplikacji i konfiguracja serwerów.
+          <br><strong>Technologie:</strong> GitHub Pages, Netlify, Vercel i inne.
+        </p>
+      </div>
+  
+      <div class="card">
+        <h3>🧠 Konsultacje Programistyczne</h3>
+        <p>
+          Doradztwo techniczne i code review.
+          <br><strong>Technologie:</strong> JavaScript, Git, architektura aplikacji
+        </p>
+      </div>
+    </div>
+  </section>
 
-<section id="projekty">
-<h2> Wybrane projekty</h2>
-<div class="cards">
-  <div class="card">
-    <h3>Projekt 1</h3>
-    <p>Nowoczesna strona dla startupu technologicznego.</p>
-  </div>
-  <div class="card">
-    <h3>Projekt 2</h3>
-    <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
-  </div>
-  <div class="card">
-    <h3>Projekt 3</h3>
-    <p>Landing page generujący leady sprzedażowe.</p>
-  </div>
-  <div class="card">
-    <h3>Projekt 4</h3>
-    <p>Landing page generujący leady sprzedażowe.</p>
-  </div>
-</div>
-</section>
+  <section id="projekty">
+    <h2>Wybrane projekty</h2>
+  
+    <div class="cards projects">
+      <div class="card project-card">
+        <div class="project-image">
+          <img src="/assets/projects/projekt1.jpg" alt="Projekt 1 – strona startupu">
+        </div>
+        <h3>Projekt 1</h3>
+        <p>Nowoczesna strona dla startupu technologicznego.</p>
+      </div>
+  
+      <div class="card project-card">
+        <div class="project-image">
+          <img src="/assets/projects/projekt2.jpg" alt="Projekt 2 – platforma rezerwacyjna">
+        </div>
+        <h3>Projekt 2</h3>
+        <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
+      </div>
+  
+      <div class="card project-card">
+        <div class="project-image">
+          <img src="/assets/projects/projekt3.jpg" alt="Projekt 3 – landing page">
+        </div>
+        <h3>Projekt 3</h3>
+        <p>Landing page generujący leady sprzedażowe.</p>
+      </div>
+  
+      <div class="card project-card">
+        <div class="project-image">
+          <img src="/assets/projects/projekt4.jpg" alt="Projekt 4 – landing page">
+        </div>
+        <h3>Projekt 4</h3>
+        <p>Landing page generujący leady sprzedażowe.</p>
+      </div>
+    </div>
+  </section>
 
 <section id="kontakt">
 <h2>Kontakt</h2>
