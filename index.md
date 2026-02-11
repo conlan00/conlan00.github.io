@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Strona główna
 ---
 
@@ -11,7 +11,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: white;
-  padding-top: 60px; /* ODSTĘP NA HEADER */
+  padding-top: 64px;
 }
 
 @keyframes gradient {
@@ -20,39 +20,9 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* FIXED HEADER */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  z-index: 1000;
-  box-sizing: border-box;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: 500;
-  transition: color 0.3s, text-shadow 0.3s;
-  cursor: pointer;
-}
-
-nav a:hover,
-nav a.active {
-  color: #00f2fe;
-  text-shadow: 0 0 10px #00f2fe;
-}
-
+/* HERO */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +38,7 @@ nav a.active {
   max-width: 700px;
 }
 
+/* TYPING */
 .typing {
   border-right: 3px solid #00f2fe;
   white-space: nowrap;
@@ -85,6 +56,7 @@ nav a.active {
   50% {border-color: transparent}
 }
 
+/* BUTTON */
 .btn {
   margin-top: 30px;
   padding: 14px 35px;
@@ -102,13 +74,14 @@ nav a.active {
   box-shadow: 0 0 25px #00f2fe;
 }
 
+/* SECTIONS */
 section {
   padding: 120px 20px;
   text-align: center;
   opacity: 0;
   transform: translateY(60px);
   transition: opacity 1s, transform 1s;
-  scroll-margin-top: 70px; /* ODSTĘP DLA PRZEWIJANIA DO ANCHORA */
+  scroll-margin-top: 90px;
 }
 
 section.visible {
@@ -116,6 +89,7 @@ section.visible {
   transform: translateY(0);
 }
 
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -136,23 +110,12 @@ section.visible {
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-footer {
-  padding: 40px;
-  text-align: center;
-  background: rgba(0,0,0,0.4);
+/* MINIMA NAVBAR ACTIVE LINK */
+.site-nav a.active {
+  color: #00f2fe;
+  text-shadow: 0 0 10px #00f2fe;
 }
-
-/* DODATKOWO - AKTYWNA ZAKŁADKA W MENU PODCZAS SCROLLA */
 </style>
-
-<header>
-  <nav>
-    <a href="#o-mnie" class="nav-link">O mnie</a>
-    <a href="#oferta" class="nav-link">Usługi</a>
-    <a href="#projekty" class="nav-link">Projekty</a>
-    <a href="#kontakt" class="nav-link">Kontakt</a>
-  </nav>
-</header>
 
 <div class="hero">
   <div class="glass">
@@ -165,15 +128,12 @@ footer {
 
 <section id="o-mnie">
 ## O mnie
-
 Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.  
 Łączę design, wydajność i dobre praktyki programistyczne.
-
 </section>
 
 <section id="oferta">
 ## Moje usługi
-
 <div class="cards">
   <div class="card">
     <h3>🌐 Strony WWW</h3>
@@ -188,12 +148,10 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
     <p>Systemy, dashboardy i aplikacje online.</p>
   </div>
 </div>
-
 </section>
 
 <section id="projekty">
 ## Wybrane projekty
-
 <div class="cards">
   <div class="card">
     <h3>Projekt 1</h3>
@@ -208,46 +166,42 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
     <p>Landing page generujący leady sprzedażowe.</p>
   </div>
 </div>
-
 </section>
 
 <section id="kontakt">
 ## Kontakt
-
 📧 email@example.com  
 📱 +48 123 456 789  
-
+<br><br>
 <button class="btn">Napisz do mnie</button>
-
 </section>
 
-<footer>
-© {{ site.time | date: "%Y" }} {{ site.title }}  
-Wszystkie prawa zastrzeżone.
-</footer>
-
 <script>
-// Animacja pojawiania się sekcji przy scrollu
+// reveal sections
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
+    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
       sec.classList.add("visible");
     }
   });
 });
 
-// Podświetlanie aktywnej zakładki w menu
-const navLinks = document.querySelectorAll('nav a');
+// active nav link (minima)
+const navLinks = document.querySelectorAll('.site-nav a');
 
 window.addEventListener('scroll', () => {
-  let fromTop = window.scrollY + 80; // offset na wysokość headera
+  let fromTop = window.scrollY + 100;
 
   navLinks.forEach(link => {
-    const section = document.querySelector(link.hash);
-    if(section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop) {
+    const section = document.querySelector(link.getAttribute('href'));
+    if(!section) return;
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
