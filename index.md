@@ -117,6 +117,46 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== ABOUT SECTION ===== */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-image img {
+    margin: 0 auto;
+  }
+}
 
 /* ===== CARDS ===== */
 .cards {
@@ -165,11 +205,23 @@ section.visible {
   </div>
 </div>
 
-<section id="o-mnie">
-<h2>O mnie</h2> 
-Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.  
-Łączę design, wydajność i dobre praktyki programistyczne.
-</section>
+<section id="o-mnie" class="about">
+    <div class="about-wrapper">
+      <div class="about-text">
+        <h2>O mnie</h2>
+        <p>
+          Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji
+          i stron internetowych.<br>
+          Łączę design, wydajność i dobre praktyki programistyczne.
+        </p>
+      </div>
+  
+      <div class="about-image">
+        <img src="/assets/img/me.jpg" alt="Moje zdjęcie">
+      </div>
+    </div>
+  </section>
+  
 
 <section id="oferta">
 <h2> Moje usługi</h2>
@@ -188,7 +240,7 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
   </div>
   <div class="card">
     <h3>Konsultacje programistyczne</h3>
-    <p>Sdsfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafdsaa</p>
+    <p>Sdsfaaaaaaaaaa aaaaaaaaaaaaaa aaaaaafdsaa</p>
   </div>
 </div>
 </section>
