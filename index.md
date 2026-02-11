@@ -365,7 +365,7 @@ section.visible {
     <div class="cards projects">
       <div class="card project-card">
         <div class="project-image">
-          <img src="/assets/projects/projekt1.jpg" alt="Projekt 1 – strona startupu">
+          <img src="/assets/xxx.png" alt="Projekt 1 – strona startupu">
         </div>
         <h3>Projekt 1</h3>
         <p>Nowoczesna strona dla startupu technologicznego.</p>
