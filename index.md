@@ -252,7 +252,7 @@ section.visible {
       </div>
   
       <div class="about-image">
-        <img src="/assets/img/me.jpg" alt="Moje zdjęcie">
+        <img src="/assets/img/corporate-user-icon" alt="Moje zdjęcie">
       </div>
     </div>
   </section>
