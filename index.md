@@ -54,15 +54,11 @@ body {
 }
 /* MOBILE NAV */
 @media (max-width: 768px) {
-  .site-nav a {
-    font-size: 0.9rem;
-    padding: 6px 8px;
-  }
-  .menu-icon svg {
-    width: 24px;
-    height: 24px;
+  .site-header{
+    display: none;
   }
 }
+
 
 
 /* ===== HERO ===== */
