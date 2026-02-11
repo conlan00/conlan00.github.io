@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Moja Strona
+title: Strona główna
 ---
 
 <style>
@@ -136,17 +136,17 @@ section h2 {
 }
 
 /* ===== GRID KART ===== */
-.grid {
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 40px;
-  margin-top: 60px;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .card {
   background: rgba(255,255,255,0.08);
+  padding: 30px;
   border-radius: 20px;
-  overflow: hidden;
   backdrop-filter: blur(10px);
   transition: 0.4s;
   cursor: pointer;
@@ -161,10 +161,7 @@ section h2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
-}
-
-.card-content {
-  padding: 25px;
+  border-radius: 15px;
 }
 
 /* ===== FOOTER ===== */
@@ -179,82 +176,76 @@ footer {
 <nav>
   <div><strong>Moja Strona</strong></div>
   <div>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#oferta">Oferta</a>
     <a href="#projekty">Projekty</a>
-    <a href="#uslugi">Usługi</a>
     <a href="#kontakt">Kontakt</a>
   </div>
 </nav>
 
 <div class="hero">
   <div class="glass">
-    <h1>Tworzę nowoczesne strony internetowe 🚀</h1>
-    <p class="typing">Estetyczne, szybkie i responsywne rozwiązania webowe.</p>
-    <a href="#projekty"><button class="btn">Zobacz projekty</button></a>
+    <h1>Witaj 👋</h1>
+    <h2 class="typing">Tworzę nowoczesne rozwiązania webowe</h2>
+    <p>Projektuję szybkie, estetyczne i responsywne strony internetowe.</p>
+    <a href="#oferta"><button class="btn">Poznaj ofertę</button></a>
   </div>
 </div>
 
-<section id="projekty">
-<h2>Wybrane projekty</h2>
-
-<div class="grid">
-  <div class="card">
-    <img src="assets/projekt1.jpg" alt="Projekt 1">
-    <div class="card-content">
-      <h3>Strona firmowa</h3>
-      <p>Nowoczesna witryna dla firmy technologicznej.</p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="assets/projekt2.jpg" alt="Projekt 2">
-    <div class="card-content">
-      <h3>Landing page</h3>
-      <p>Strona sprzedażowa generująca leady.</p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="assets/projekt3.jpg" alt="Projekt 3">
-    <div class="card-content">
-      <h3>Aplikacja webowa</h3>
-      <p>Panel administracyjny z dashboardem.</p>
-    </div>
-  </div>
-</div>
+<section id="o-mnie">
+  <h2>O mnie</h2>
+  <p>Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.<br>
+  Łączę design, wydajność i dobre praktyki programistyczne.</p>
 </section>
 
-<section id="uslugi">
-<h2>Usługi</h2>
+<section id="oferta">
+  <h2>Moja oferta</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🌐 Strony WWW</h3>
+      <p>Nowoczesne, responsywne strony firmowe i landing page.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Optymalizacja</h3>
+      <p>Przyspieszam istniejące strony i poprawiam SEO.</p>
+    </div>
+    <div class="card">
+      <h3>🛠 Aplikacje Web</h3>
+      <p>Systemy, dashboardy i aplikacje online.</p>
+    </div>
+  </div>
+</section>
 
-<div class="grid">
-  <div class="card">
-    <div class="card-content">
-      <h3>🌐 Tworzenie stron</h3>
-      <p>Responsywne strony firmowe, portfolio, landing page.</p>
+<section id="projekty">
+  <h2>Wybrane projekty</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="assets/projekt1.jpg" alt="Projekt 1">
+      <h3>Projekt 1</h3>
+      <p>Nowoczesna strona dla startupu technologicznego.</p>
+    </div>
+    <div class="card">
+      <img src="assets/projekt2.jpg" alt="Projekt 2">
+      <h3>Projekt 2</h3>
+      <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
+    </div>
+    <div class="card">
+      <img src="assets/projekt3.jpg" alt="Projekt 3">
+      <h3>Projekt 3</h3>
+      <p>Landing page generujący leady sprzedażowe.</p>
     </div>
   </div>
-  <div class="card">
-    <div class="card-content">
-      <h3>⚡ Optymalizacja SEO</h3>
-      <p>Przyspieszanie stron i poprawa widoczności w Google.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-content">
-      <h3>🛠 Aplikacje webowe</h3>
-      <p>Systemy rezerwacyjne, dashboardy i dedykowane aplikacje.</p>
-    </div>
-  </div>
-</div>
 </section>
 
 <section id="kontakt">
-<h2>Kontakt</h2>
-<p>📧 email@example.com</p>
-<p>📱 +48 123 456 789</p>
-<button class="btn">Napisz do mnie</button>
+  <h2>Kontakt</h2>
+  <p>📧 email@example.com<br>📱 +48 123 456 789</p>
+  <button class="btn">Napisz do mnie</button>
 </section>
 
 <footer>
-© {{ site.time | date: "%Y" }} Moja Strona. Wszystkie prawa zastrzeżone.
+  © {{ site.time | date: "%Y" }} Moja Strona  
+  Wszystkie prawa zastrzeżone.
 </footer>
 
 <script>
