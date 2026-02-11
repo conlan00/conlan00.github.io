@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Strona główna
+title: Moja Strona
 ---
 
 <style>
+/* ===== BODY & GRADIENT HERO ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -20,8 +21,7 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* ===== MENU ===== */
-
+/* ===== NAVIGATION ===== */
 nav {
   position: fixed;
   width: 100%;
@@ -29,24 +29,29 @@ nav {
   display: flex;
   justify-content: space-between;
   background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   z-index: 1000;
+  transition: 0.4s;
+}
+
+nav:hover {
+  background: rgba(0,0,0,0.6);
 }
 
 nav a {
   color: white;
   text-decoration: none;
   margin-left: 25px;
-  transition: 0.3s;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: #00f2fe;
+  transform: scale(1.05);
 }
 
 /* ===== HERO ===== */
-
 .hero {
   height: 100vh;
   display: flex;
@@ -61,8 +66,37 @@ nav a:hover {
   padding: 60px;
   border-radius: 25px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
   max-width: 700px;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(50px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.typing {
+  border-right: 3px solid #00f2fe;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 3s steps(40), blink .7s infinite;
+  font-size: 1.3rem;
+}
+
+@keyframes typing {
+  from {width: 0}
+  to {width: 100%}
+}
+
+@keyframes blink {
+  50% {border-color: transparent}
 }
 
 .btn {
@@ -83,7 +117,6 @@ nav a:hover {
 }
 
 /* ===== SEKCJE ===== */
-
 section {
   padding: 120px 20px;
   text-align: center;
@@ -97,8 +130,12 @@ section.visible {
   transform: translateY(0);
 }
 
-/* ===== KARTY ===== */
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
 
+/* ===== GRID KART ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
@@ -112,11 +149,12 @@ section.visible {
   overflow: hidden;
   backdrop-filter: blur(10px);
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .card img {
@@ -129,15 +167,17 @@ section.visible {
   padding: 25px;
 }
 
+/* ===== FOOTER ===== */
 footer {
   padding: 40px;
   text-align: center;
   background: rgba(0,0,0,0.4);
+  margin-top: 50px;
 }
 </style>
 
 <nav>
-  <div><strong>{{ site.title }}</strong></div>
+  <div><strong>Moja Strona</strong></div>
   <div>
     <a href="#projekty">Projekty</a>
     <a href="#uslugi">Usługi</a>
@@ -147,8 +187,8 @@ footer {
 
 <div class="hero">
   <div class="glass">
-    <h1>Nowoczesne strony internetowe 🚀</h1>
-    <p>Projektuję i tworzę estetyczne, szybkie i responsywne rozwiązania webowe.</p>
+    <h1>Tworzę nowoczesne strony internetowe 🚀</h1>
+    <p class="typing">Estetyczne, szybkie i responsywne rozwiązania webowe.</p>
     <a href="#projekty"><button class="btn">Zobacz projekty</button></a>
   </div>
 </div>
@@ -157,7 +197,6 @@ footer {
 <h2>Wybrane projekty</h2>
 
 <div class="grid">
-
   <div class="card">
     <img src="assets/projekt1.jpg" alt="Projekt 1">
     <div class="card-content">
@@ -165,7 +204,6 @@ footer {
       <p>Nowoczesna witryna dla firmy technologicznej.</p>
     </div>
   </div>
-
   <div class="card">
     <img src="assets/projekt2.jpg" alt="Projekt 2">
     <div class="card-content">
@@ -173,7 +211,6 @@ footer {
       <p>Strona sprzedażowa generująca leady.</p>
     </div>
   </div>
-
   <div class="card">
     <img src="assets/projekt3.jpg" alt="Projekt 3">
     <div class="card-content">
@@ -181,7 +218,6 @@ footer {
       <p>Panel administracyjny z dashboardem.</p>
     </div>
   </div>
-
 </div>
 </section>
 
@@ -189,28 +225,24 @@ footer {
 <h2>Usługi</h2>
 
 <div class="grid">
-
   <div class="card">
     <div class="card-content">
       <h3>🌐 Tworzenie stron</h3>
-      <p>Responsywne strony firmowe i portfolio.</p>
+      <p>Responsywne strony firmowe, portfolio, landing page.</p>
     </div>
   </div>
-
   <div class="card">
     <div class="card-content">
       <h3>⚡ Optymalizacja SEO</h3>
       <p>Przyspieszanie stron i poprawa widoczności w Google.</p>
     </div>
   </div>
-
   <div class="card">
     <div class="card-content">
       <h3>🛠 Aplikacje webowe</h3>
-      <p>Systemy rezerwacyjne, dashboardy, dedykowane rozwiązania.</p>
+      <p>Systemy rezerwacyjne, dashboardy i dedykowane aplikacje.</p>
     </div>
   </div>
-
 </div>
 </section>
 
@@ -222,12 +254,12 @@ footer {
 </section>
 
 <footer>
-© {{ site.time | date: "%Y" }} {{ site.title }}
+© {{ site.time | date: "%Y" }} Moja Strona. Wszystkie prawa zastrzeżone.
 </footer>
 
 <script>
+// ===== ANIMACJA SCROLL =====
 const sections = document.querySelectorAll("section");
-
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
