@@ -1,1 +1,5 @@
+theme: minima
+title: Twoja strona
 
+header_pages:
+  - index.md
