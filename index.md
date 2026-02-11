@@ -135,4 +135,103 @@ footer {
   background: rgba(0,0,0,0.4);
 }
 
-/* dodajemy offset dla kotwic żeby menu nie nakładało się na sekc*
+/* dodajemy offset dla kotwic żeby menu nie nakładało się na sekcje */
+section {
+  scroll-margin-top: 80px;
+}
+</style>
+
+<!-- --- MENU --- -->
+<header>
+  <nav>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#oferta">Usługi</a>
+    <a href="#projekty">Projekty</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="glass">
+    <h1>Witaj 👋</h1>
+    <h2 class="typing">Tworzę nowoczesne rozwiązania webowe</h2>
+    <p>Projektuję szybkie, estetyczne i responsywne strony internetowe.</p>
+    <a href="#oferta"><button class="btn">Poznaj ofertę</button></a>
+  </div>
+</div>
+
+<section id="o-mnie">
+## O mnie
+
+Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.  
+Łączę design, wydajność i dobre praktyki programistyczne.
+
+</section>
+
+<section id="oferta">
+## Moje usługi
+
+<div class="cards">
+  <div class="card">
+    <h3>🌐 Strony WWW</h3>
+    <p>Nowoczesne, responsywne strony firmowe i landing page.</p>
+  </div>
+  <div class="card">
+    <h3>⚡ Optymalizacja</h3>
+    <p>Przyspieszam istniejące strony i poprawiam SEO.</p>
+  </div>
+  <div class="card">
+    <h3>🛠 Aplikacje Web</h3>
+    <p>Systemy, dashboardy i aplikacje online.</p>
+  </div>
+</div>
+
+</section>
+
+<section id="projekty">
+## Wybrane projekty
+
+<div class="cards">
+  <div class="card">
+    <h3>Projekt 1</h3>
+    <p>Nowoczesna strona dla startupu technologicznego.</p>
+  </div>
+  <div class="card">
+    <h3>Projekt 2</h3>
+    <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
+  </div>
+  <div class="card">
+    <h3>Projekt 3</h3>
+    <p>Landing page generujący leady sprzedażowe.</p>
+  </div>
+</div>
+
+</section>
+
+<section id="kontakt">
+## Kontakt
+
+📧 email@example.com  
+📱 +48 123 456 789  
+
+<button class="btn">Napisz do mnie</button>
+
+</section>
+
+<footer>
+© {{ site.time | date: "%Y" }} {{ site.title }}  
+Wszystkie prawa zastrzeżone.
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add("visible");
+    }
+  });
+});
+</script>
