@@ -202,7 +202,7 @@ section.visible {
     margin: 0 auto;
   }
   .hero {
-    width: 80%;
+    width: 100%;
     }
 }
 
