@@ -54,7 +54,7 @@ body {
 }
 /* MOBILE NAV */
 @media (max-width: 768px) {
-  .site-header{
+  .site-nav{
     display: none;
   }
 }
