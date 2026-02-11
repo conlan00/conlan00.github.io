@@ -4,7 +4,6 @@ title: Strona główna
 ---
 
 <style>
-/* ===== BODY & GRADIENT HERO ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -12,7 +11,6 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: white;
-  scroll-behavior: smooth;
 }
 
 @keyframes gradient {
@@ -21,44 +19,38 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* ===== NAVIGATION ===== */
-nav {
+/* --- NOWE MENU --- */
+header {
   position: fixed;
+  top: 0;
   width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
+  backdrop-filter: blur(10px);
   background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
   z-index: 1000;
-  transition: 0.4s;
-}
-
-nav:hover {
-  background: rgba(0,0,0,0.6);
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
+  margin: 0 20px;
   font-weight: 500;
   transition: 0.3s;
 }
 
 nav a:hover {
   color: #00f2fe;
-  transform: scale(1.05);
+  text-shadow: 0 0 10px #00f2fe;
 }
 
-/* ===== HERO ===== */
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
 .glass {
@@ -66,19 +58,8 @@ nav a:hover {
   padding: 60px;
   border-radius: 25px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
   max-width: 700px;
-  animation: fadeIn 2s ease forwards;
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0; transform: translateY(50px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
 }
 
 .typing {
@@ -86,8 +67,7 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  animation: typing 3s steps(40), blink .7s infinite;
-  font-size: 1.3rem;
+  animation: typing 3s steps(30), blink .7s infinite;
 }
 
 @keyframes typing {
@@ -116,7 +96,6 @@ h1 {
   box-shadow: 0 0 25px #00f2fe;
 }
 
-/* ===== SEKCJE ===== */
 section {
   padding: 120px 20px;
   text-align: center;
@@ -130,12 +109,6 @@ section.visible {
   transform: translateY(0);
 }
 
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-/* ===== GRID KART ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -149,114 +122,17 @@ section h2 {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   transition: 0.4s;
-  cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-/* ===== FOOTER ===== */
 footer {
   padding: 40px;
   text-align: center;
   background: rgba(0,0,0,0.4);
-  margin-top: 50px;
 }
-</style>
 
-<nav>
-  <div><strong>Moja Strona</strong></div>
-  <div>
-    <a href="#o-mnie">O mnie</a>
-    <a href="#oferta">Oferta</a>
-    <a href="#projekty">Projekty</a>
-    <a href="#kontakt">Kontakt</a>
-  </div>
-</nav>
-
-<div class="hero">
-  <div class="glass">
-    <h1>Witaj 👋</h1>
-    <h2 class="typing">Tworzę nowoczesne rozwiązania webowe</h2>
-    <p>Projektuję szybkie, estetyczne i responsywne strony internetowe.</p>
-    <a href="#oferta"><button class="btn">Poznaj ofertę</button></a>
-  </div>
-</div>
-
-<section id="o-mnie">
-  <h2>O mnie</h2>
-  <p>Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.<br>
-  Łączę design, wydajność i dobre praktyki programistyczne.</p>
-</section>
-
-<section id="oferta">
-  <h2>Moja oferta</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>🌐 Strony WWW</h3>
-      <p>Nowoczesne, responsywne strony firmowe i landing page.</p>
-    </div>
-    <div class="card">
-      <h3>⚡ Optymalizacja</h3>
-      <p>Przyspieszam istniejące strony i poprawiam SEO.</p>
-    </div>
-    <div class="card">
-      <h3>🛠 Aplikacje Web</h3>
-      <p>Systemy, dashboardy i aplikacje online.</p>
-    </div>
-  </div>
-</section>
-
-<section id="projekty">
-  <h2>Wybrane projekty</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="assets/projekt1.jpg" alt="Projekt 1">
-      <h3>Projekt 1</h3>
-      <p>Nowoczesna strona dla startupu technologicznego.</p>
-    </div>
-    <div class="card">
-      <img src="assets/projekt2.jpg" alt="Projekt 2">
-      <h3>Projekt 2</h3>
-      <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
-    </div>
-    <div class="card">
-      <img src="assets/projekt3.jpg" alt="Projekt 3">
-      <h3>Projekt 3</h3>
-      <p>Landing page generujący leady sprzedażowe.</p>
-    </div>
-  </div>
-</section>
-
-<section id="kontakt">
-  <h2>Kontakt</h2>
-  <p>📧 email@example.com<br>📱 +48 123 456 789</p>
-  <button class="btn">Napisz do mnie</button>
-</section>
-
-<footer>
-  © {{ site.time | date: "%Y" }} Moja Strona  
-  Wszystkie prawa zastrzeżone.
-</footer>
-
-<script>
-// ===== ANIMACJA SCROLL =====
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      sec.classList.add("visible");
-    }
-  });
-});
-</script>
+/* dodajemy offset dla kotwic żeby menu nie nakładało się na sekc*
