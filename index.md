@@ -114,7 +114,7 @@ body {
 /* ===== TYPING ===== */
 .typing {
   border-right: 3px solid #00f2fe;
-  white-space: normal;
+  white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   animation: typing 3s steps(30), blink .7s infinite;
