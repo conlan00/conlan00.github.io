@@ -21,17 +21,27 @@ body {
 }
 
 /* ===== MINIMA HEADER – WHITE ===== */
+/* ===== MINIMA HEADER – WHITE ===== */
 .site-header {
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
   background: rgba(255,255,255,0.9) !important;
   backdrop-filter: blur(12px);
   border-top: none !important;
   border-bottom: none !important;
+  box-sizing: border-box;
 }
 
-.site-title,
+.site-title {
+  font-size: 1.2rem;
+}
+
 .site-nav a {
-  color: #111 !important;
-  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 10px;
 }
 
 .site-nav a:hover,
@@ -42,14 +52,28 @@ body {
 .menu-icon svg path {
   fill: #111;
 }
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .site-nav a {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+  .menu-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 
 /* ===== HERO ===== */
 .hero {
-  height: calc(100vh - 64px);
+  width: 100%; /* Pełna szerokość */
+  padding: 20px; /* Margines wewnętrzny na małych ekranach */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-sizing: border-box; /* Zapobiega wyciekaniu paddingu */
 }
 
 @media (min-width: 1024px) {
@@ -59,14 +83,34 @@ body {
 }
 
 .glass {
-  background: rgba(255,255,255,0.08);
-  padding: 60px;
-  border-radius: 25px;
+  width: 100%; /* Pełna szerokość kontenera */
+  max-width: 700px; /* Limit szerokości na dużych ekranach */
+  padding: 40px 20px; /* Dopasowany padding do telefonów */
+  border-radius: 20px;
   backdrop-filter: blur(20px);
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-  max-width: 700px;
 }
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* Wysokość dopasowana do zawartości */
+    padding: 40px 10px;
+  }
 
+  .glass {
+    padding: 30px 15px;
+    border-radius: 15px;
+  }
+
+  .typing {
+    font-size: 1.2rem; /* Mniejsze litery na telefonach */
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
 /* ===== TYPING ===== */
 .typing {
   border-right: 3px solid #00f2fe;
