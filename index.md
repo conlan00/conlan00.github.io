@@ -144,13 +144,13 @@ section.visible {
 </div>
 
 <section id="o-mnie">
-## O mnie
+<h2>O mnie</h2> 
 Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.  
 Łączę design, wydajność i dobre praktyki programistyczne.
 </section>
 
 <section id="oferta">
-## Moje usługi
+<h2> Moje usługi</h2>
 <div class="cards">
   <div class="card">
     <h3>🌐 Strony WWW</h3>
@@ -168,7 +168,7 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
 </section>
 
 <section id="projekty">
-## Wybrane projekty
+<h2> Wybrane projekty</h2>
 <div class="cards">
   <div class="card">
     <h3>Projekt 1</h3>
@@ -186,7 +186,7 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
 </section>
 
 <section id="kontakt">
-## Kontakt
+<h2>Kontakt</h2>
 📧 email@example.com  
 📱 +48 123 456 789  
 <br><br>
