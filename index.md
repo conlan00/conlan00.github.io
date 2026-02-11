@@ -3,6 +3,7 @@ layout: home
 ---
 
 <style>
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -19,7 +20,30 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* HERO */
+/* ===== MINIMA HEADER – WHITE ===== */
+.site-header {
+  background: rgba(255,255,255,0.9) !important;
+  backdrop-filter: blur(12px);
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.site-title,
+.site-nav a {
+  color: #111 !important;
+  font-weight: 500;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #00bcd4 !important;
+}
+
+.menu-icon svg path {
+  fill: #111;
+}
+
+/* ===== HERO ===== */
 .hero {
   height: calc(100vh - 64px);
   display: flex;
@@ -37,7 +61,7 @@ body {
   max-width: 700px;
 }
 
-/* TYPING */
+/* ===== TYPING ===== */
 .typing {
   border-right: 3px solid #00f2fe;
   white-space: nowrap;
@@ -55,7 +79,7 @@ body {
   50% {border-color: transparent}
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .btn {
   margin-top: 30px;
   padding: 14px 35px;
@@ -73,7 +97,7 @@ body {
   box-shadow: 0 0 25px #00f2fe;
 }
 
-/* SECTIONS */
+/* ===== SECTIONS ===== */
 section {
   padding: 120px 20px;
   text-align: center;
@@ -88,7 +112,7 @@ section.visible {
   transform: translateY(0);
 }
 
-/* CARDS */
+/* ===== CARDS ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -107,12 +131,6 @@ section.visible {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* MINIMA NAVBAR ACTIVE LINK */
-.site-nav a.active {
-  color: #00f2fe;
-  text-shadow: 0 0 10px #00f2fe;
 }
 </style>
 
@@ -181,13 +199,13 @@ const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
-    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
       sec.classList.add("visible");
     }
   });
 });
 
-// active nav link (minima)
+// active link in Minima navbar
 const navLinks = document.querySelectorAll('.site-nav a');
 
 window.addEventListener('scroll', () => {
@@ -195,7 +213,7 @@ window.addEventListener('scroll', () => {
 
   navLinks.forEach(link => {
     const section = document.querySelector(link.getAttribute('href'));
-    if(!section) return;
+    if (!section) return;
 
     if (
       section.offsetTop <= fromTop &&
