@@ -11,6 +11,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: white;
+  padding-top: 60px; /* ODSTĘP NA HEADER */
 }
 
 @keyframes gradient {
@@ -19,17 +20,20 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* --- NOWE MENU --- */
+/* FIXED HEADER */
 header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 60px;
+  line-height: 60px;
   backdrop-filter: blur(10px);
   background: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
-  padding: 15px 0;
+  padding: 0 20px;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 nav a {
@@ -37,10 +41,12 @@ nav a {
   text-decoration: none;
   margin: 0 20px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
+  cursor: pointer;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: #00f2fe;
   text-shadow: 0 0 10px #00f2fe;
 }
@@ -101,7 +107,8 @@ section {
   text-align: center;
   opacity: 0;
   transform: translateY(60px);
-  transition: 1s;
+  transition: opacity 1s, transform 1s;
+  scroll-margin-top: 70px; /* ODSTĘP DLA PRZEWIJANIA DO ANCHORA */
 }
 
 section.visible {
@@ -121,7 +128,7 @@ section.visible {
   padding: 30px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  transition: 0.4s;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .card:hover {
@@ -135,19 +142,15 @@ footer {
   background: rgba(0,0,0,0.4);
 }
 
-/* dodajemy offset dla kotwic żeby menu nie nakładało się na sekcje */
-section {
-  scroll-margin-top: 80px;
-}
+/* DODATKOWO - AKTYWNA ZAKŁADKA W MENU PODCZAS SCROLLA */
 </style>
 
-<!-- --- MENU --- -->
 <header>
   <nav>
-    <a href="#o-mnie">O mnie</a>
-    <a href="#oferta">Usługi</a>
-    <a href="#projekty">Projekty</a>
-    <a href="#kontakt">Kontakt</a>
+    <a href="#o-mnie" class="nav-link">O mnie</a>
+    <a href="#oferta" class="nav-link">Usługi</a>
+    <a href="#projekty" class="nav-link">Projekty</a>
+    <a href="#kontakt" class="nav-link">Kontakt</a>
   </nav>
 </header>
 
@@ -224,6 +227,7 @@ Wszystkie prawa zastrzeżone.
 </footer>
 
 <script>
+// Animacja pojawiania się sekcji przy scrollu
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
@@ -231,6 +235,22 @@ window.addEventListener("scroll", () => {
     const top = sec.getBoundingClientRect().top;
     if(top < window.innerHeight - 100){
       sec.classList.add("visible");
+    }
+  });
+});
+
+// Podświetlanie aktywnej zakładki w menu
+const navLinks = document.querySelectorAll('nav a');
+
+window.addEventListener('scroll', () => {
+  let fromTop = window.scrollY + 80; // offset na wysokość headera
+
+  navLinks.forEach(link => {
+    const section = document.querySelector(link.hash);
+    if(section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 });
