@@ -11,6 +11,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: white;
+  scroll-behavior: smooth;
 }
 
 @keyframes gradient {
@@ -19,12 +20,40 @@ body {
   100% {background-position: 0% 50%;}
 }
 
+/* ===== MENU ===== */
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00f2fe;
+}
+
+/* ===== HERO ===== */
+
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .glass {
@@ -34,23 +63,6 @@ body {
   backdrop-filter: blur(20px);
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
   max-width: 700px;
-}
-
-.typing {
-  border-right: 3px solid #00f2fe;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  animation: typing 3s steps(30), blink .7s infinite;
-}
-
-@keyframes typing {
-  from {width: 0}
-  to {width: 100%}
-}
-
-@keyframes blink {
-  50% {border-color: transparent}
 }
 
 .btn {
@@ -70,6 +82,8 @@ body {
   box-shadow: 0 0 25px #00f2fe;
 }
 
+/* ===== SEKCJE ===== */
+
 section {
   padding: 120px 20px;
   text-align: center;
@@ -83,17 +97,19 @@ section.visible {
   transform: translateY(0);
 }
 
-.cards {
+/* ===== KARTY ===== */
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 40px;
+  margin-top: 60px;
 }
 
 .card {
   background: rgba(255,255,255,0.08);
-  padding: 30px;
   border-radius: 20px;
+  overflow: hidden;
   backdrop-filter: blur(10px);
   transition: 0.4s;
 }
@@ -103,6 +119,16 @@ section.visible {
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 25px;
+}
+
 footer {
   padding: 40px;
   text-align: center;
@@ -110,76 +136,93 @@ footer {
 }
 </style>
 
+<nav>
+  <div><strong>{{ site.title }}</strong></div>
+  <div>
+    <a href="#projekty">Projekty</a>
+    <a href="#uslugi">Usługi</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</nav>
+
 <div class="hero">
   <div class="glass">
-    <h1>Witaj 👋</h1>
-    <h2 class="typing">Tworzę nowoczesne rozwiązania webowe</h2>
-    <p>Projektuję szybkie, estetyczne i responsywne strony internetowe.</p>
-    <a href="#oferta"><button class="btn">Poznaj ofertę</button></a>
+    <h1>Nowoczesne strony internetowe 🚀</h1>
+    <p>Projektuję i tworzę estetyczne, szybkie i responsywne rozwiązania webowe.</p>
+    <a href="#projekty"><button class="btn">Zobacz projekty</button></a>
   </div>
 </div>
-
-<section id="o-mnie">
-## O mnie
-
-Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji i stron internetowych.  
-Łączę design, wydajność i dobre praktyki programistyczne.
-
-</section>
-
-<section id="oferta">
-## Moja oferta
-
-<div class="cards">
-  <div class="card">
-    <h3>🌐 Strony WWW</h3>
-    <p>Nowoczesne, responsywne strony firmowe i landing page.</p>
-  </div>
-  <div class="card">
-    <h3>⚡ Optymalizacja</h3>
-    <p>Przyspieszam istniejące strony i poprawiam SEO.</p>
-  </div>
-  <div class="card">
-    <h3>🛠 Aplikacje Web</h3>
-    <p>Systemy, dashboardy i aplikacje online.</p>
-  </div>
-</div>
-
-</section>
 
 <section id="projekty">
-## Wybrane projekty
+<h2>Wybrane projekty</h2>
 
-<div class="cards">
+<div class="grid">
+
   <div class="card">
-    <h3>Projekt 1</h3>
-    <p>Nowoczesna strona dla startupu technologicznego.</p>
+    <img src="assets/projekt1.jpg" alt="Projekt 1">
+    <div class="card-content">
+      <h3>Strona firmowa</h3>
+      <p>Nowoczesna witryna dla firmy technologicznej.</p>
+    </div>
   </div>
+
   <div class="card">
-    <h3>Projekt 2</h3>
-    <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
+    <img src="assets/projekt2.jpg" alt="Projekt 2">
+    <div class="card-content">
+      <h3>Landing page</h3>
+      <p>Strona sprzedażowa generująca leady.</p>
+    </div>
   </div>
+
   <div class="card">
-    <h3>Projekt 3</h3>
-    <p>Landing page generujący leady sprzedażowe.</p>
+    <img src="assets/projekt3.jpg" alt="Projekt 3">
+    <div class="card-content">
+      <h3>Aplikacja webowa</h3>
+      <p>Panel administracyjny z dashboardem.</p>
+    </div>
   </div>
+
 </div>
+</section>
 
+<section id="uslugi">
+<h2>Usługi</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-content">
+      <h3>🌐 Tworzenie stron</h3>
+      <p>Responsywne strony firmowe i portfolio.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h3>⚡ Optymalizacja SEO</h3>
+      <p>Przyspieszanie stron i poprawa widoczności w Google.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h3>🛠 Aplikacje webowe</h3>
+      <p>Systemy rezerwacyjne, dashboardy, dedykowane rozwiązania.</p>
+    </div>
+  </div>
+
+</div>
 </section>
 
 <section id="kontakt">
-## Kontakt
-
-📧 email@example.com  
-📱 +48 123 456 789  
-
+<h2>Kontakt</h2>
+<p>📧 email@example.com</p>
+<p>📱 +48 123 456 789</p>
 <button class="btn">Napisz do mnie</button>
-
 </section>
 
 <footer>
-© {{ site.time | date: "%Y" }} {{ site.title }}  
-Wszystkie prawa zastrzeżone.
+© {{ site.time | date: "%Y" }} {{ site.title }}
 </footer>
 
 <script>
