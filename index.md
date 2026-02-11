@@ -52,6 +52,12 @@ body {
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  .hero {
+    height: calc(120vh - 64px);
+  }
+}
+
 .glass {
   background: rgba(255,255,255,0.08);
   padding: 60px;
@@ -115,22 +121,38 @@ section.visible {
 /* ===== CARDS ===== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  margin-top: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 .card {
   background: rgba(255,255,255,0.08);
-  padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
   transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: translateY(-12px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.45);
 }
 </style>
 
@@ -164,6 +186,10 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
     <h3>🛠 Aplikacje Web</h3>
     <p>Systemy, dashboardy i aplikacje online.</p>
   </div>
+  <div class="card">
+    <h3>Konsultacje programistyczne</h3>
+    <p>Sdsfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafdsaa</p>
+  </div>
 </div>
 </section>
 
@@ -180,6 +206,10 @@ Jestem web developerem specjalizującym się w tworzeniu nowoczesnych aplikacji 
   </div>
   <div class="card">
     <h3>Projekt 3</h3>
+    <p>Landing page generujący leady sprzedażowe.</p>
+  </div>
+  <div class="card">
+    <h3>Projekt 4</h3>
     <p>Landing page generujący leady sprzedażowe.</p>
   </div>
 </div>
