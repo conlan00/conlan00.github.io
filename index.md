@@ -411,6 +411,81 @@ layout: home
   .step:hover::before {
     opacity: 1;
   }
+
+/*===========================================================*/
+Super! Skoro chcesz, żeby karta o AI wyróżniała się i od razu było widać, że chodzi o sztuczną inteligencję, proponuję zrobić szklany efekt z neonowym akcentem i dużym napisem „AI”.
+
+Oto przykładowa karta w HTML + CSS dopasowana do Twojego stylu:
+
+HTML
+<div class="cards">
+  <!-- Inne karty usług -->
+
+  <div class="card ai-card">
+    <div class="ai-badge">AI</div>
+    <h3>Implementacja Sztucznej Inteligencji</h3>
+    <p>
+      Wprowadzamy inteligentne algorytmy do Twojego projektu – od 
+      automatyzacji procesów, przez analizę danych, po rekomendacje 
+      wspierające decyzje biznesowe.
+    </p>
+    <a href="#" class="btn">Dowiedz się więcej</a>
+  </div>
+
+  <!-- Inne karty usług -->
+</div>
+
+CSS
+
+Dodaj to do swojego CSS pod .cards i .card:
+
+/* ===== AI CARD ===== */
+.ai-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00f2fe;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+  backdrop-filter: blur(18px);
+  padding: 50px 30px;
+  border-radius: 24px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.ai-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(0, 242, 254, 0.6);
+}
+
+/* Neonowy badge AI */
+.ai-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 15px 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #00f2fe, 0 0 50px #4facfe;
+  text-align: center;
+}
+
+/* Dodatkowe wyróżnienie nagłówka */
+.ai-card h3 {
+  color: #00f2fe;
+  margin-top: 40px; /* żeby nie nachodziło na badge */
+}
+
+/* Dostosowanie przycisku */
+.ai-card .btn {
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  box-shadow: 0 0 20px #00f2fe;
+}
+
+
+
+  
 </style>
 
 <div class="hero">
@@ -514,6 +589,18 @@ layout: home
   <h2>Moje usługi</h2>
 
   <div class="cards">
+
+ <div class="card ai-card">
+    <div class="ai-badge">AI</div>
+    <h3>Implementacja Sztucznej Inteligencji</h3>
+    <p>
+      Wprowadzamy inteligentne algorytmy do Twojego projektu – od 
+      automatyzacji procesów, przez analizę danych, po rekomendacje 
+      wspierające decyzje biznesowe.
+    </p>
+    <a href="#" class="btn">Dowiedz się więcej</a>
+  </div>
+  
     <div class="card">
       <h3>⚡ Optymalizacja & SEO</h3>
       <p>
