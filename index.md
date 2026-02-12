@@ -381,7 +381,7 @@ section.visible {
   @media (min-width: 1280px) {
 
   .process-section {
-    max-width: 1600px; /* było 1200 */
+    max-width: 1200px; /* było 1200 */
   }
 
   .process-section h2 {
