@@ -413,32 +413,6 @@ layout: home
   }
 
 /*===========================================================*/
-Super! Skoro chcesz, żeby karta o AI wyróżniała się i od razu było widać, że chodzi o sztuczną inteligencję, proponuję zrobić szklany efekt z neonowym akcentem i dużym napisem „AI”.
-
-Oto przykładowa karta w HTML + CSS dopasowana do Twojego stylu:
-
-HTML
-<div class="cards">
-  <!-- Inne karty usług -->
-
-  <div class="card ai-card">
-    <div class="ai-badge">AI</div>
-    <h3>Implementacja Sztucznej Inteligencji</h3>
-    <p>
-      Wprowadzamy inteligentne algorytmy do Twojego projektu – od 
-      automatyzacji procesów, przez analizę danych, po rekomendacje 
-      wspierające decyzje biznesowe.
-    </p>
-    <a href="#" class="btn">Dowiedz się więcej</a>
-  </div>
-
-  <!-- Inne karty usług -->
-</div>
-
-CSS
-
-Dodaj to do swojego CSS pod .cards i .card:
-
 /* ===== AI CARD ===== */
 .ai-card {
   position: relative;
@@ -598,7 +572,6 @@ Dodaj to do swojego CSS pod .cards i .card:
       automatyzacji procesów, przez analizę danych, po rekomendacje 
       wspierające decyzje biznesowe.
     </p>
-    <a href="#" class="btn">Dowiedz się więcej</a>
   </div>
   
     <div class="card">
