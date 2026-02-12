@@ -506,6 +506,7 @@ layout: home
           aplikacji, aby projekt działał stabilnie i efektywnie.
         </p>
       </div>
+      </div>
   </div>
 </section>
 
@@ -521,7 +522,7 @@ layout: home
       </p>
     </div>
 
-    <div class="card">
+  <div class="card">
       <h3>🛠 Aplikacje Web i strony <strong>WWW</strong></h3>
       <p>
         Systemy webowe, dashboardy, panele administracyjne.
@@ -529,7 +530,7 @@ layout: home
       </p>
     </div>
 
-    <div class="card">
+  <div class="card">
       <h3>📱 Aplikacje Front-end</h3>
       <p>
         Interfejsy użytkownika oparte o komponenty.
@@ -537,7 +538,7 @@ layout: home
       </p>
     </div>
 
-    <div class="card">
+  <div class="card">
       <h3>🔌 Integracje API</h3>
       <p>
         Integracja z zewnętrznymi usługami i systemami.
@@ -545,7 +546,7 @@ layout: home
       </p>
     </div>
 
-    <div class="card">
+  <div class="card">
       <h3>☁️ Deploy & Hosting</h3>
       <p>
         Wdrażanie aplikacji i konfiguracja serwerów.
@@ -553,7 +554,7 @@ layout: home
       </p>
     </div>
 
-    <div class="card">
+  <div class="card">
       <h3>🧠 Konsultacje Programistyczne</h3>
       <p>
         Doradztwo techniczne i code review.
@@ -576,7 +577,7 @@ layout: home
       <a href="https://dziuplawarsztat.pl">LIVE DEMO</a>
     </div>
 
-    <div class="card project-card">
+  <div class="card project-card">
       <div class="project-image">
         <img src="/assets/yyy.png" alt="Projekt 2">
       </div>
@@ -584,14 +585,15 @@ layout: home
       <p>Nowoczesna strona internetowa centrum urody</p>
     </div>
 
-    <div class="card project-card">
+  <div class="card project-card">
       <div class="project-image">
         <img src="/assets/zzz.png" alt="Projekt 3">
       </div>
       <h3>Projekt 3</h3>
       <p>Nowoczesna strona internetowa agencji nieruchomości</p>
     </div>
-    </section>
+    </div>
+</section>
 
 <section id="kontakt">
   <h2>Kontakt</h2>
