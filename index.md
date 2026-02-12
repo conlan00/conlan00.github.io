@@ -466,7 +466,7 @@ layout: home
   <div class="glass">
     <h1>Witaj 👋</h1>
     <h2 class="typing">Tworzę nowoczesne rozwiązania</h2>
-    <p>Projektuję szybkie, estetyczne i responsywne strony internetowe.</p>
+    <p>Projektuję szybkie, estetyczne i responsywne strony internetowe wykorzystujące <strong>AI</strong>.</p>
     <a href="#oferta"><button class="btn">Poznaj ofertę</button></a>
   </div>
 </div>
