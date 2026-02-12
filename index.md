@@ -277,6 +277,106 @@ section.visible {
     padding: 0 20px 25px;
   }
 }
+/* ===== PROCESS / WSPÓŁPRACA ===== */
+
+.process-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 70px auto;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* GRID */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* STEP CARD */
+.step {
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-align: left;
+}
+
+.step:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.45);
+}
+
+/* NUMBER BADGE */
+.step-number {
+  position: absolute;
+  top: -18px;
+  left: 30px;
+  background: linear-gradient(90deg,#00f2fe,#4facfe);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(0,242,254,0.4);
+}
+
+/* TEXT */
+.step h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.step p {
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Subtelny efekt podświetlenia */
+.step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(120deg, rgba(0,242,254,0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.step:hover::before {
+  opacity: 1;
+}
 </style>
 
 <div class="hero">
@@ -305,6 +405,66 @@ section.visible {
     </div>
   </section>
   
+  <section id="wspolpraca" class="process-section">
+    <div class="container">
+      <h2>Jak wygląda współpraca z klientem?</h2>
+      <p class="section-intro">
+        Stawiamy na partnerskie podejście i iteracyjny proces pracy. 
+        Od pierwszego pomysłu aż po gotowy produkt – działamy razem.
+      </p>
+  
+      <div class="process-steps">
+  
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Pomysł i potrzeby</h3>
+          <p>
+            Klient przedstawia swój pomysł, cele biznesowe oraz oczekiwania. 
+            Analizujemy potrzeby, grupę docelową i kluczowe funkcjonalności.
+          </p>
+        </div>
+  
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Analiza i koncepcja</h3>
+          <p>
+            Proponujemy rozwiązania technologiczne i wstępną koncepcję projektu. 
+            Omawiamy zakres prac, harmonogram oraz estymację kosztów.
+          </p>
+        </div>
+  
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Iteracyjny rozwój</h3>
+          <p>
+            Projekt realizujemy etapami (iteracjami). Po każdym etapie klient 
+            otrzymuje działającą wersję produktu, którą może przetestować i 
+            przekazać feedback.
+          </p>
+        </div>
+  
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Feedback i usprawnienia</h3>
+          <p>
+            Na podstawie uwag wprowadzamy poprawki i rozwijamy kolejne funkcje. 
+            Dzięki temu produkt ewoluuje zgodnie z wizją klienta i realnymi 
+            potrzebami użytkowników.
+          </p>
+        </div>
+  
+        <div class="step">
+          <div class="step-number">05</div>
+          <h3>Wdrożenie i wsparcie</h3>
+          <p>
+            Po zakończeniu prac wdrażamy projekt na środowisko produkcyjne. 
+            Oferujemy również dalszy rozwój, utrzymanie i wsparcie techniczne.
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
 
   <section id="oferta">
     <h2>Moje usługi</h2>
@@ -366,10 +526,11 @@ section.visible {
     <div class="cards projects">
       <div class="card project-card">
         <div class="project-image">
-          <img src="/assets/xxx.png" alt="Projekt 1 – strona startupu">
+          <img src="/assets/xxx.png" alt="Projekt 1 – strona www">
         </div>
         <h3>Strona WWW</h3>
         <p>Nowoczesna strona internetowa warsztatu samochodowego</p>
+        <p href="https://dziuplawarsztat.pl">LIVE DEMO</p>
       </div>
   
       <div class="card project-card">
