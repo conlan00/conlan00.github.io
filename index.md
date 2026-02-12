@@ -382,7 +382,7 @@ section.visible {
 <div class="hero">
   <div class="glass">
     <h1>Witaj 👋</h1>
-    <h2 class="typing">Tworzę nowoczesne rozwiązania webowe</h2>
+    <h2 class="typing">Tworzę nowoczesne rozwiązania</h2>
     <p>Projektuję szybkie, estetyczne i responsywne strony internetowe.</p>
     <a href="#oferta"><button class="btn">Poznaj ofertę</button></a>
   </div>
@@ -461,7 +461,17 @@ section.visible {
             Oferujemy również dalszy rozwój, utrzymanie i wsparcie techniczne.
           </p>
         </div>
-  
+      <div class="step">
+      <div class="step-number">06</div>
+      <h3>Monitoring i optymalizacja</h3>
+      <p>
+        Po wdrożeniu monitorujemy działanie systemu, analizujemy wydajność 
+        oraz zachowania użytkowników. Na podstawie danych wprowadzamy 
+        optymalizacje, poprawiamy szybkość działania i dbamy o bezpieczeństwo 
+        aplikacji, aby projekt działał stabilnie i efektywnie.
+      </p>
+    </div>
+
       </div>
     </div>
   </section>
@@ -530,39 +540,29 @@ section.visible {
         </div>
         <h3>Strona WWW</h3>
         <p>Nowoczesna strona internetowa warsztatu samochodowego</p>
-        <p href="https://dziuplawarsztat.pl">LIVE DEMO</p>
+        <a href="https://dziuplawarsztat.pl">LIVE DEMO</a>
       </div>
   
       <div class="card project-card">
         <div class="project-image">
-          <img src="/assets/projects/projekt2.jpg" alt="Projekt 2 – platforma rezerwacyjna">
+          <img src="/assets/yyy.png" alt="Projekt 2">
         </div>
         <h3>Projekt 2</h3>
-        <p>Platforma rezerwacyjna z panelem administracyjnym.</p>
+        <p>Nowoczesna strona internetowa centrum urody</p>
       </div>
   
       <div class="card project-card">
         <div class="project-image">
-          <img src="/assets/projects/projekt3.jpg" alt="Projekt 3 – landing page">
+          <img src="/assets/zzz.png" alt="Projekt 3">
         </div>
         <h3>Projekt 3</h3>
-        <p>Landing page generujący leady sprzedażowe.</p>
+        <p>Nowoczesna strona internetowa agencji nieruchomości</p>
       </div>
-  
-      <div class="card project-card">
-        <div class="project-image">
-          <img src="/assets/projects/projekt4.jpg" alt="Projekt 4 – landing page">
-        </div>
-        <h3>Projekt 4</h3>
-        <p>Landing page generujący leady sprzedażowe.</p>
-      </div>
-    </div>
   </section>
 
 <section id="kontakt">
 <h2>Kontakt</h2>
 📧 email@example.com  
-📱 +48 123 456 789  
 <br><br>
 <button class="btn">Napisz do mnie</button>
 </section>
