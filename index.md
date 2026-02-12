@@ -377,52 +377,6 @@ section.visible {
 .step:hover::before {
   opacity: 1;
 }
-
-  @media (min-width: 1280px) {
-
-  .process-section {
-    max-width: 1200px; /* było 1200 */
-  }
-
-  .process-section h2 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-  }
-
-  .section-intro {
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin-bottom: 90px;
-  }
-
-
-  .process-steps {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-  }
-
-
-  .step {
-    padding: 60px;
-    border-radius: 28px;
-  }
-
-  .step-number {
-    font-size: 1rem;
-    padding: 10px 22px;
-    top: -22px;
-  }
-
-  .step h3 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  .step p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-  }
-}
 </style>
 
 <div class="hero">
@@ -576,7 +530,7 @@ section.visible {
         </div>
         <h3>Strona WWW</h3>
         <p>Nowoczesna strona internetowa warsztatu samochodowego</p>
-        <a href="https://dziuplawarsztat.pl">LIVE DEMO</a>
+        <p href="https://dziuplawarsztat.pl">LIVE DEMO</p>
       </div>
   
       <div class="card project-card">
