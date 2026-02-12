@@ -586,15 +586,7 @@ layout: home
       <h3>🛠 Aplikacje Web i strony <strong>WWW</strong></h3>
       <p>
         Systemy webowe, dashboardy, panele administracyjne.
-        <br><strong>Technologie:</strong> Angular, .NET, REST API
-      </p>
-    </div>
-
-  <div class="card">
-      <h3>📱 Aplikacje Front-end</h3>
-      <p>
-        Interfejsy użytkownika oparte o komponenty.
-        <br><strong>Technologie:</strong> React, Next, Angular
+        <br><strong>Technologie:</strong> Angular, .NET, REST API i inne
       </p>
     </div>
 
@@ -610,7 +602,7 @@ layout: home
       <h3>☁️ Deploy & Hosting</h3>
       <p>
         Wdrażanie aplikacji i konfiguracja serwerów.
-        <br><strong>Technologie:</strong> GitHub Pages, Netlify, Vercel i inne.
+        <br><strong>Technologie:</strong> WordPress, Netlify, Vercel i inne.
       </p>
     </div>
 
