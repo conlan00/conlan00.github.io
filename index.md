@@ -576,7 +576,7 @@ section.visible {
         </div>
         <h3>Strona WWW</h3>
         <p>Nowoczesna strona internetowa warsztatu samochodowego</p>
-        <p href="https://dziuplawarsztat.pl">LIVE DEMO</p>
+        <a href="https://dziuplawarsztat.pl">LIVE DEMO</a>
       </div>
   
       <div class="card project-card">
