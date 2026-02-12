@@ -397,7 +397,7 @@ section.visible {
 
 
   .process-steps {
-    grid-template-columns: repeat(3, minmax(380px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 60px;
   }
 
