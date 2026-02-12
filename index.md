@@ -447,9 +447,9 @@ layout: home
       Od pierwszego pomysłu aż po gotowy produkt – działamy razem.
     </p>
 
-    <div class="process-steps">
+  <div class="process-steps">
 
-      <div class="step">
+  <div class="step">
         <div class="step-number">01</div>
         <h3>Pomysł i potrzeby</h3>
         <p>
@@ -458,7 +458,7 @@ layout: home
         </p>
       </div>
 
-      <div class="step">
+  <div class="step">
         <div class="step-number">02</div>
         <h3>Analiza i koncepcja</h3>
         <p>
@@ -467,7 +467,7 @@ layout: home
         </p>
       </div>
 
-      <div class="step">
+  <div class="step">
         <div class="step-number">03</div>
         <h3>Iteracyjny rozwój</h3>
         <p>
@@ -477,7 +477,7 @@ layout: home
         </p>
       </div>
 
-      <div class="step">
+  <div class="step">
         <div class="step-number">04</div>
         <h3>Feedback i usprawnienia</h3>
         <p>
@@ -487,7 +487,7 @@ layout: home
         </p>
       </div>
 
-      <div class="step">
+  <div class="step">
         <div class="step-number">05</div>
         <h3>Wdrożenie i wsparcie</h3>
         <p>
@@ -495,7 +495,8 @@ layout: home
           Oferujemy również dalszy rozwój, utrzymanie i wsparcie techniczne.
         </p>
       </div>
-      <div class="step">
+      
+  <div class="step">
         <div class="step-number">06</div>
         <h3>Monitoring i optymalizacja</h3>
         <p>
@@ -505,8 +506,6 @@ layout: home
           aplikacji, aby projekt działał stabilnie i efektywnie.
         </p>
       </div>
-
-    </div>
   </div>
 </section>
 
