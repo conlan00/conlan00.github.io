@@ -592,7 +592,7 @@ layout: home
       <h3>Projekt 3</h3>
       <p>Nowoczesna strona internetowa agencji nieruchomości</p>
     </div>
-</section>
+    </section>
 
 <section id="kontakt">
   <h2>Kontakt</h2>
