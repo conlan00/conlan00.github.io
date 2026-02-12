@@ -381,7 +381,7 @@ section.visible {
   @media (min-width: 1280px) {
 
   .process-section {
-    max-width: 1400px;
+    max-width: 1600px; /* było 1200 */
   }
 
   .process-section h2 {
@@ -395,9 +395,12 @@ section.visible {
     margin-bottom: 90px;
   }
 
+
   .process-steps {
+    grid-template-columns: repeat(3, minmax(380px, 1fr));
     gap: 60px;
   }
+
 
   .step {
     padding: 60px;
