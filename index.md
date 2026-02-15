@@ -649,7 +649,7 @@ layout: home
 
 <section id="kontakt">
   <h2>Kontakt</h2>
-  📧 email@example.com
+  📧 twojdeveloper@atomicmail.io
   <br><br>
   <button class="btn">Napisz do mnie</button>
 </section>
